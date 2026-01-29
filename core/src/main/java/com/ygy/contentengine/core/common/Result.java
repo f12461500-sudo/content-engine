@@ -41,4 +41,7 @@ public class Result<T> implements Serializable {
     public static <T> Result<T> error(Integer code, String message) {
         return new Result<T>(code, message, null);
     }
+    public static <T> Result<T> unauthorized(String message) {
+        return new Result<T>(401, message, null);
+    }
 }
